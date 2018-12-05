@@ -3,7 +3,7 @@
 
 **使用前注意事项**
 
-要求`wexp-cli`版本`^1.0.5`
+要求[`wexp-cli`](https://github.com/Chaunjie/wexp-cli)版本`^1.0.5`, [`wexp-redux API`](https://github.com/Chaunjie/wexp-redux)
 
 **安装**
 
