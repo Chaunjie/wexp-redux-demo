@@ -1,0 +1,93 @@
+<style lang="less" src="../../less/test.less"></style>
+<template>
+  <view class="index-page">
+    <k-panel custom-class="custom-panel">
+      <view class="custom-panel__title">num: {{getNum}}</view>
+      <k-button 
+        custom-class="custom-btn" 
+        name="success"
+        size="small" 
+        bindtap="inCrement">
+        num + 1
+      </k-button>
+    </k-panel>
+
+    <k-panel custom-class="custom-panel">
+      <view class="custom-panel__title">num: {{getNum}}</view>
+      <k-button 
+        custom-class="custom-btn" 
+        name="success"
+        size="small" 
+        bindtap="desCrement">
+        num - 1
+      </k-button>
+    </k-panel>
+
+    <k-panel custom-class="custom-panel">
+      <view class="custom-panel__title">num: {{getSyncNum}}</view>
+      <k-button 
+        custom-class="custom-btn" 
+        name="success"
+        size="small" 
+        bindtap="asyncInc">
+        sync num + 1
+      </k-button>
+    </k-panel>
+
+    <k-button 
+      custom-class="trans-btn" 
+      name="success" 
+      size="large"
+      bindtap="$back">
+      点击返回
+    </k-button>
+  </view>
+</template>
+<script>
+  import wexp from 'wexp'
+  import {connect} from 'wexp-redux'
+  import {asyncInc, inCrement, desCrement} from '../../store/actions/index'
+
+  @connect({
+    getNum (state) {
+      return state.crement.num
+    },
+    getSyncNum (state) {
+      return state.crement.asyncNum
+    }
+  }, {
+    asyncInc,
+    inCrement,
+    desCrement
+  })
+  export default class Index extends wexp.page {
+    config = {
+      navigationBarTitleText: '测试页面',
+      backgroundColor: '#ccc',
+      'usingComponents': {
+        'k-panel': '../../components/panel/index',
+        'k-button': 'wexp-button/index'
+      }
+    }
+
+    data = {}
+
+    methods = {}
+
+    onHide () {
+      console.log('on hide')
+    }
+
+    onLoad () {
+      console.log('on load')
+    }
+
+    onReady () {
+      console.log('on ready')
+    }
+
+    onShow () {
+      console.log('on show')
+    }
+  }
+</script>

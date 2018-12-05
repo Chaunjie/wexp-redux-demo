@@ -1,0 +1,50 @@
+{
+  "name": "wexp-redux-demo",
+  "version": "0.0.1",
+  "description": "wexp-redux-demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wexp build -w",
+    "build": "wexp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chaunjie/wexp-demo.git"
+  },
+  "keywords": [
+    "wexp",
+    "redux"
+  ],
+  "author": "chaunjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chaunjie/wexp-demo/issues"
+  },
+  "homepage": "https://github.com/Chaunjie/wexp-demo#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.1",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-plugin-html": "^2.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "wexp-eslint": "0.0.6"
+  },
+  "dependencies": {
+    "kai-ui": "^1.2.4",
+    "wexp": "^0.1.0",
+    "wexp-button": "^1.0.0",
+    "wexp-redux": "^1.0.0",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.2.1",
+    "redux-promise": "^0.5.3"
+  }
+}
